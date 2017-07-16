@@ -7,21 +7,88 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F13ED921F1BB1DA00A1A0CB /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED881F1BB1DA00A1A0CB /* OpenSans-Bold.ttf */; };
+		6F13ED931F1BB1DA00A1A0CB /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED881F1BB1DA00A1A0CB /* OpenSans-Bold.ttf */; };
+		6F13ED941F1BB1DA00A1A0CB /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED891F1BB1DA00A1A0CB /* OpenSans-BoldItalic.ttf */; };
+		6F13ED951F1BB1DA00A1A0CB /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED891F1BB1DA00A1A0CB /* OpenSans-BoldItalic.ttf */; };
+		6F13ED961F1BB1DA00A1A0CB /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED8A1F1BB1DA00A1A0CB /* OpenSans-ExtraBold.ttf */; };
+		6F13ED971F1BB1DA00A1A0CB /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED8A1F1BB1DA00A1A0CB /* OpenSans-ExtraBold.ttf */; };
+		6F13ED981F1BB1DA00A1A0CB /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED8B1F1BB1DA00A1A0CB /* OpenSans-ExtraBoldItalic.ttf */; };
+		6F13ED991F1BB1DA00A1A0CB /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED8B1F1BB1DA00A1A0CB /* OpenSans-ExtraBoldItalic.ttf */; };
+		6F13ED9A1F1BB1DA00A1A0CB /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED8C1F1BB1DA00A1A0CB /* OpenSans-Italic.ttf */; };
+		6F13ED9B1F1BB1DA00A1A0CB /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED8C1F1BB1DA00A1A0CB /* OpenSans-Italic.ttf */; };
+		6F13ED9C1F1BB1DA00A1A0CB /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED8D1F1BB1DA00A1A0CB /* OpenSans-Light.ttf */; };
+		6F13ED9D1F1BB1DA00A1A0CB /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED8D1F1BB1DA00A1A0CB /* OpenSans-Light.ttf */; };
+		6F13ED9E1F1BB1DA00A1A0CB /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED8E1F1BB1DA00A1A0CB /* OpenSans-LightItalic.ttf */; };
+		6F13ED9F1F1BB1DA00A1A0CB /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED8E1F1BB1DA00A1A0CB /* OpenSans-LightItalic.ttf */; };
+		6F13EDA01F1BB1DA00A1A0CB /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED8F1F1BB1DA00A1A0CB /* OpenSans-Regular.ttf */; };
+		6F13EDA11F1BB1DA00A1A0CB /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED8F1F1BB1DA00A1A0CB /* OpenSans-Regular.ttf */; };
+		6F13EDA21F1BB1DA00A1A0CB /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED901F1BB1DA00A1A0CB /* OpenSans-Semibold.ttf */; };
+		6F13EDA31F1BB1DA00A1A0CB /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED901F1BB1DA00A1A0CB /* OpenSans-Semibold.ttf */; };
+		6F13EDA41F1BB1DA00A1A0CB /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED911F1BB1DA00A1A0CB /* OpenSans-SemiboldItalic.ttf */; };
+		6F13EDA51F1BB1DA00A1A0CB /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED911F1BB1DA00A1A0CB /* OpenSans-SemiboldItalic.ttf */; };
+		6F24DA741F0B406D003C2DD2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F24DA731F0B406D003C2DD2 /* LoginViewController.swift */; };
 		6F873F621F04C3A60072326F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F873F611F04C3A60072326F /* AppDelegate.swift */; };
-		6F873F641F04C3A60072326F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F873F631F04C3A60072326F /* ViewController.swift */; };
-		6F873F671F04C3A60072326F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F873F651F04C3A60072326F /* Main.storyboard */; };
 		6F873F691F04C3A60072326F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F873F681F04C3A60072326F /* Assets.xcassets */; };
 		6F873F6C1F04C3A60072326F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F873F6A1F04C3A60072326F /* LaunchScreen.storyboard */; };
+		6F873F741F04C5070072326F /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F873F731F04C5070072326F /* ForgotPassViewController.swift */; };
+		6F873F761F04D4DC0072326F /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F873F751F04D4DC0072326F /* AutoLayout.swift */; };
+		6F925A641F05649C00767848 /* LTHRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F925A631F05649C00767848 /* LTHRadioButton.swift */; };
+		6F9B96AB1F15B6A2001E8274 /* ErrorInfor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9B96AA1F15B6A2001E8274 /* ErrorInfor.swift */; };
+		6FA6BD881F0B46FD00869588 /* DataPassWithNumPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6BD871F0B46FD00869588 /* DataPassWithNumPhone.swift */; };
+		6FA6BD8A1F0B47B700869588 /* DataPassWithEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6BD891F0B47B700869588 /* DataPassWithEmail.swift */; };
+		6FBB41E31F0C8D2D00556F82 /* DataUserWithEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBB41E21F0C8D2D00556F82 /* DataUserWithEmail.swift */; };
+		6FBB41E51F0C8E0E00556F82 /* DataUserWithNumPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBB41E41F0C8E0E00556F82 /* DataUserWithNumPhone.swift */; };
+		6FF11F481F0812890070A563 /* ForgotInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11F421F0812890070A563 /* ForgotInteractor.swift */; };
+		6FF11F491F0812890070A563 /* ForgotPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11F431F0812890070A563 /* ForgotPresenter.swift */; };
+		6FF11F4A1F0812890070A563 /* ForgotProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11F441F0812890070A563 /* ForgotProtocols.swift */; };
+		6FF11F4B1F0812890070A563 /* ForgotRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11F451F0812890070A563 /* ForgotRouter.swift */; };
+		6FF11F4C1F0812890070A563 /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11F461F0812890070A563 /* ForgotViewController.swift */; };
+		6FF11F4D1F0812890070A563 /* ForgotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF11F471F0812890070A563 /* ForgotViewController.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6FBB41EF1F0CAF5C00556F82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F873F561F04C3A60072326F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F873F5D1F04C3A60072326F;
+			remoteInfo = task1;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		6F13ED881F1BB1DA00A1A0CB /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		6F13ED891F1BB1DA00A1A0CB /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		6F13ED8A1F1BB1DA00A1A0CB /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		6F13ED8B1F1BB1DA00A1A0CB /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		6F13ED8C1F1BB1DA00A1A0CB /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		6F13ED8D1F1BB1DA00A1A0CB /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		6F13ED8E1F1BB1DA00A1A0CB /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		6F13ED8F1F1BB1DA00A1A0CB /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		6F13ED901F1BB1DA00A1A0CB /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		6F13ED911F1BB1DA00A1A0CB /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		6F24DA731F0B406D003C2DD2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6F873F5E1F04C3A60072326F /* task1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F873F611F04C3A60072326F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6F873F631F04C3A60072326F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6F873F661F04C3A60072326F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6F873F681F04C3A60072326F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F873F6B1F04C3A60072326F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F873F6D1F04C3A60072326F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F873F731F04C5070072326F /* ForgotPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
+		6F873F751F04D4DC0072326F /* AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
+		6F925A631F05649C00767848 /* LTHRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTHRadioButton.swift; sourceTree = "<group>"; };
+		6F9B96AA1F15B6A2001E8274 /* ErrorInfor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorInfor.swift; sourceTree = "<group>"; };
+		6FA6BD871F0B46FD00869588 /* DataPassWithNumPhone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPassWithNumPhone.swift; sourceTree = "<group>"; };
+		6FA6BD891F0B47B700869588 /* DataPassWithEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPassWithEmail.swift; sourceTree = "<group>"; };
+		6FBB41E21F0C8D2D00556F82 /* DataUserWithEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUserWithEmail.swift; sourceTree = "<group>"; };
+		6FBB41E41F0C8E0E00556F82 /* DataUserWithNumPhone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUserWithNumPhone.swift; sourceTree = "<group>"; };
+		6FBB41EA1F0CAF5C00556F82 /* task1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = task1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FF11F421F0812890070A563 /* ForgotInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotInteractor.swift; sourceTree = "<group>"; };
+		6FF11F431F0812890070A563 /* ForgotPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPresenter.swift; sourceTree = "<group>"; };
+		6FF11F441F0812890070A563 /* ForgotProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotProtocols.swift; sourceTree = "<group>"; };
+		6FF11F451F0812890070A563 /* ForgotRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotRouter.swift; sourceTree = "<group>"; };
+		6FF11F461F0812890070A563 /* ForgotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
+		6FF11F471F0812890070A563 /* ForgotViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,9 +99,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6FBB41E71F0CAF5C00556F82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F13ED871F1BB1B000A1A0CB /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				6F13ED881F1BB1DA00A1A0CB /* OpenSans-Bold.ttf */,
+				6F13ED891F1BB1DA00A1A0CB /* OpenSans-BoldItalic.ttf */,
+				6F13ED8A1F1BB1DA00A1A0CB /* OpenSans-ExtraBold.ttf */,
+				6F13ED8B1F1BB1DA00A1A0CB /* OpenSans-ExtraBoldItalic.ttf */,
+				6F13ED8C1F1BB1DA00A1A0CB /* OpenSans-Italic.ttf */,
+				6F13ED8D1F1BB1DA00A1A0CB /* OpenSans-Light.ttf */,
+				6F13ED8E1F1BB1DA00A1A0CB /* OpenSans-LightItalic.ttf */,
+				6F13ED8F1F1BB1DA00A1A0CB /* OpenSans-Regular.ttf */,
+				6F13ED901F1BB1DA00A1A0CB /* OpenSans-Semibold.ttf */,
+				6F13ED911F1BB1DA00A1A0CB /* OpenSans-SemiboldItalic.ttf */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
 		6F873F551F04C3A60072326F = {
 			isa = PBXGroup;
 			children = (
@@ -47,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				6F873F5E1F04C3A60072326F /* task1.app */,
+				6FBB41EA1F0CAF5C00556F82 /* task1UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,14 +146,68 @@
 		6F873F601F04C3A60072326F /* task1 */ = {
 			isa = PBXGroup;
 			children = (
+				6F13ED871F1BB1B000A1A0CB /* Font */,
+				6FF11F3D1F0811FC0070A563 /* Classes */,
 				6F873F611F04C3A60072326F /* AppDelegate.swift */,
-				6F873F631F04C3A60072326F /* ViewController.swift */,
-				6F873F651F04C3A60072326F /* Main.storyboard */,
+				6F873F751F04D4DC0072326F /* AutoLayout.swift */,
 				6F873F681F04C3A60072326F /* Assets.xcassets */,
 				6F873F6A1F04C3A60072326F /* LaunchScreen.storyboard */,
 				6F873F6D1F04C3A60072326F /* Info.plist */,
+				6F873F731F04C5070072326F /* ForgotPassViewController.swift */,
 			);
 			path = task1;
+			sourceTree = "<group>";
+		};
+		6F925A621F05645600767848 /* uifix */ = {
+			isa = PBXGroup;
+			children = (
+				6F925A631F05649C00767848 /* LTHRadioButton.swift */,
+			);
+			name = uifix;
+			sourceTree = "<group>";
+		};
+		6F9B96A91F15B661001E8274 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				6FA6BD871F0B46FD00869588 /* DataPassWithNumPhone.swift */,
+				6FA6BD891F0B47B700869588 /* DataPassWithEmail.swift */,
+				6FBB41E21F0C8D2D00556F82 /* DataUserWithEmail.swift */,
+				6FBB41E41F0C8E0E00556F82 /* DataUserWithNumPhone.swift */,
+				6F9B96AA1F15B6A2001E8274 /* ErrorInfor.swift */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		6FF11F3D1F0811FC0070A563 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6FF11F3E1F08121C0070A563 /* Modules */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		6FF11F3E1F08121C0070A563 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6FF11F3F1F08122E0070A563 /* FogotInfomation */,
+				6F24DA731F0B406D003C2DD2 /* LoginViewController.swift */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		6FF11F3F1F08122E0070A563 /* FogotInfomation */ = {
+			isa = PBXGroup;
+			children = (
+				6F925A621F05645600767848 /* uifix */,
+				6F9B96A91F15B661001E8274 /* data */,
+				6FF11F461F0812890070A563 /* ForgotViewController.swift */,
+				6FF11F431F0812890070A563 /* ForgotPresenter.swift */,
+				6FF11F451F0812890070A563 /* ForgotRouter.swift */,
+				6FF11F421F0812890070A563 /* ForgotInteractor.swift */,
+				6FF11F441F0812890070A563 /* ForgotProtocols.swift */,
+				6FF11F471F0812890070A563 /* ForgotViewController.xib */,
+			);
+			name = FogotInfomation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +230,24 @@
 			productReference = 6F873F5E1F04C3A60072326F /* task1.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6FBB41E91F0CAF5C00556F82 /* task1UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FBB41F11F0CAF5C00556F82 /* Build configuration list for PBXNativeTarget "task1UITests" */;
+			buildPhases = (
+				6FBB41E61F0CAF5C00556F82 /* Sources */,
+				6FBB41E71F0CAF5C00556F82 /* Frameworks */,
+				6FBB41E81F0CAF5C00556F82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FBB41F01F0CAF5C00556F82 /* PBXTargetDependency */,
+			);
+			name = task1UITests;
+			productName = task1UITests;
+			productReference = 6FBB41EA1F0CAF5C00556F82 /* task1UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +262,12 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = AHB7ATBDP2;
 						ProvisioningStyle = Automatic;
+					};
+					6FBB41E91F0CAF5C00556F82 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = AHB7ATBDP2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6F873F5D1F04C3A60072326F;
 					};
 				};
 			};
@@ -115,6 +285,7 @@
 			projectRoot = "";
 			targets = (
 				6F873F5D1F04C3A60072326F /* task1 */,
+				6FBB41E91F0CAF5C00556F82 /* task1UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -124,9 +295,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F13EDA21F1BB1DA00A1A0CB /* OpenSans-Semibold.ttf in Resources */,
+				6F13EDA41F1BB1DA00A1A0CB /* OpenSans-SemiboldItalic.ttf in Resources */,
+				6FF11F4D1F0812890070A563 /* ForgotViewController.xib in Resources */,
+				6F13EDA01F1BB1DA00A1A0CB /* OpenSans-Regular.ttf in Resources */,
+				6F13ED9A1F1BB1DA00A1A0CB /* OpenSans-Italic.ttf in Resources */,
+				6F13ED981F1BB1DA00A1A0CB /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				6F873F6C1F04C3A60072326F /* LaunchScreen.storyboard in Resources */,
+				6F13ED9E1F1BB1DA00A1A0CB /* OpenSans-LightItalic.ttf in Resources */,
+				6F13ED921F1BB1DA00A1A0CB /* OpenSans-Bold.ttf in Resources */,
 				6F873F691F04C3A60072326F /* Assets.xcassets in Resources */,
-				6F873F671F04C3A60072326F /* Main.storyboard in Resources */,
+				6F13ED9C1F1BB1DA00A1A0CB /* OpenSans-Light.ttf in Resources */,
+				6F13ED941F1BB1DA00A1A0CB /* OpenSans-BoldItalic.ttf in Resources */,
+				6F13ED961F1BB1DA00A1A0CB /* OpenSans-ExtraBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FBB41E81F0CAF5C00556F82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F13ED9D1F1BB1DA00A1A0CB /* OpenSans-Light.ttf in Resources */,
+				6F13ED951F1BB1DA00A1A0CB /* OpenSans-BoldItalic.ttf in Resources */,
+				6F13ED9F1F1BB1DA00A1A0CB /* OpenSans-LightItalic.ttf in Resources */,
+				6F13EDA31F1BB1DA00A1A0CB /* OpenSans-Semibold.ttf in Resources */,
+				6F13ED931F1BB1DA00A1A0CB /* OpenSans-Bold.ttf in Resources */,
+				6F13ED971F1BB1DA00A1A0CB /* OpenSans-ExtraBold.ttf in Resources */,
+				6F13EDA51F1BB1DA00A1A0CB /* OpenSans-SemiboldItalic.ttf in Resources */,
+				6F13ED9B1F1BB1DA00A1A0CB /* OpenSans-Italic.ttf in Resources */,
+				6F13EDA11F1BB1DA00A1A0CB /* OpenSans-Regular.ttf in Resources */,
+				6F13ED991F1BB1DA00A1A0CB /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,22 +335,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F873F641F04C3A60072326F /* ViewController.swift in Sources */,
+				6F873F761F04D4DC0072326F /* AutoLayout.swift in Sources */,
 				6F873F621F04C3A60072326F /* AppDelegate.swift in Sources */,
+				6FA6BD881F0B46FD00869588 /* DataPassWithNumPhone.swift in Sources */,
+				6FBB41E51F0C8E0E00556F82 /* DataUserWithNumPhone.swift in Sources */,
+				6FF11F4C1F0812890070A563 /* ForgotViewController.swift in Sources */,
+				6FA6BD8A1F0B47B700869588 /* DataPassWithEmail.swift in Sources */,
+				6FF11F4A1F0812890070A563 /* ForgotProtocols.swift in Sources */,
+				6F925A641F05649C00767848 /* LTHRadioButton.swift in Sources */,
+				6FF11F481F0812890070A563 /* ForgotInteractor.swift in Sources */,
+				6F873F741F04C5070072326F /* ForgotPassViewController.swift in Sources */,
+				6F9B96AB1F15B6A2001E8274 /* ErrorInfor.swift in Sources */,
+				6FF11F491F0812890070A563 /* ForgotPresenter.swift in Sources */,
+				6F24DA741F0B406D003C2DD2 /* LoginViewController.swift in Sources */,
+				6FBB41E31F0C8D2D00556F82 /* DataUserWithEmail.swift in Sources */,
+				6FF11F4B1F0812890070A563 /* ForgotRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FBB41E61F0CAF5C00556F82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		6F873F651F04C3A60072326F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6F873F661F04C3A60072326F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		6FBB41F01F0CAF5C00556F82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F873F5D1F04C3A60072326F /* task1 */;
+			targetProxy = 6FBB41EF1F0CAF5C00556F82 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		6F873F6A1F04C3A60072326F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -265,6 +483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AHB7ATBDP2;
 				INFOPLIST_FILE = task1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quan.task1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,10 +497,37 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AHB7ATBDP2;
 				INFOPLIST_FILE = task1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quan.task1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		6FBB41F21F0CAF5C00556F82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = AHB7ATBDP2;
+				INFOPLIST_FILE = task1UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quan.task1UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = task1;
+			};
+			name = Debug;
+		};
+		6FBB41F31F0CAF5C00556F82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = AHB7ATBDP2;
+				INFOPLIST_FILE = task1UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quan.task1UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = task1;
 			};
 			name = Release;
 		};
@@ -304,6 +550,16 @@
 				6F873F721F04C3A60072326F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FBB41F11F0CAF5C00556F82 /* Build configuration list for PBXNativeTarget "task1UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FBB41F21F0CAF5C00556F82 /* Debug */,
+				6FBB41F31F0CAF5C00556F82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
