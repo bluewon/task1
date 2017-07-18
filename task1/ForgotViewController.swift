@@ -10,7 +10,7 @@
 
 import UIKit
 
-class ForgotViewController: UIViewController, ForgotViewProtocol {
+class ForgotViewController: UIViewController, ForgotViewProtocol, UITextFieldDelegate, UIScrollViewDelegate {
     // MARK: - OBJECT PRESENTER
 	var presenter: ForgotPresenterProtocol?
     var dateFormate = Bool()
@@ -98,7 +98,7 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
 //    }
     override func viewDidLoad() {
         super.viewDidLoad()
-//        printFonts()
+        //printFonts()
         txtUser.delegate = self
         txtProtocol.delegate = self
         txtNumCard.delegate = self
@@ -260,7 +260,7 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
         lblPass.baselineAdjustment = .alignCenters
         lblPass.textAlignment = .center
         lblPass.text = "FORGOT PASSWORD"
-        lblPass.font = UIFont(name: "OpenSans", size: 18)
+        lblPass.font = UIFont(name: "OpenSans-Semibold", size: 18)
         lblPass.translatesAutoresizingMaskIntoConstraints = false
         lblPass.textColor = #colorLiteral(red: 0.09411764706, green: 0.8, blue: 0.5137254902, alpha: 1)
         viewForgotPass.addSubview(lblPass)
@@ -300,12 +300,6 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
     }
 
 
-    func setNext(_ sender: UILongPressGestureRecognizer){         //  editingDidBegin
-
-            imgNext.isHidden = false
-            imgSubmit.isHidden = true
-
-    }
 
     func setupViewBotUser(){
         viewBotUser.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.2)
@@ -353,7 +347,7 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
         lblRdbMobile.adjustsFontSizeToFitWidth = true
         lblRdbMobile.textColor = #colorLiteral(red: 0.09411764706, green: 0.8, blue: 0.5137254902, alpha: 1)
         lblRdbMobile.textAlignment = .center
-        lblRdbMobile.font = UIFont(name: "OpenSans", size: 11)
+        lblRdbMobile.font = UIFont(name: "OpenSans-Semibold", size: 11)
         lblRdbMobile.translatesAutoresizingMaskIntoConstraints = false
         viewForgotPass.addSubview(lblRdbMobile)
 
@@ -415,7 +409,7 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
     func setupTxtProtocol(){
 
         txtProtocol.borderStyle = .none
-        txtProtocol.keyboardType = .numberPad
+        txtProtocol.keyboardType = .phonePad
         txtProtocol.clearButtonMode = .whileEditing
         txtProtocol.placeholder = "Mobile phone"
         txtProtocol.font = UIFont(name: "OpenSans", size: 15)
@@ -471,40 +465,7 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
         imgNext.isUserInteractionEnabled = true
         imgNext.addGestureRecognizer(hold)
     }
-    func holdNext(_ sender: UILongPressGestureRecognizer){
-        imgNext.image = #imageLiteral(resourceName: "btn_next_selected")
-        if txtUser.text != "" && txtProtocol.text == ""{
-            txtProtocol.becomeFirstResponder()
-            txtProtocol.keyboardType = .numberPad
-            imgSubmit.isHidden = true
-            imgNext.isHidden = false
-        }
-        if txtUser.text == "" && txtProtocol.text != "" {
-            txtUser.becomeFirstResponder()
-            imgSubmit.isHidden = true
-            imgNext.isHidden = false
-        }
-        if txtUser.text != "" && txtProtocol.text != ""{
 
-            if sender.state == .ended{
-                presenter?.getDataPass(userName: txtUser.text!, kindOfSecurity: txtProtocol.text!, isEmail: rdbEmail.isSelected)
-                imgSubmit.isHidden = true
-                imgNext.isHidden = false
-                imgNext.image = #imageLiteral(resourceName: "btn_next")
-            }
-        }
-        if txtUser.text == "" && txtProtocol.text == "" {
-
-                imgNext.image = #imageLiteral(resourceName: "btn_next")
-                txtUser.becomeFirstResponder()
-                imgSubmit.isHidden = true
-                imgNext.isHidden = false
-
-        }
-        if sender.state == .ended {
-            imgNext.image = #imageLiteral(resourceName: "btn_next")
-        }
-    }
     func setupImgSubmit(){
         imgSubmit.translatesAutoresizingMaskIntoConstraints = false
         viewForgotPass.addSubview(imgSubmit)
@@ -527,7 +488,7 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
         lblUser.text = "FORGOT USERNAME"
         lblUser.textAlignment = .center
         lblUser.adjustsFontSizeToFitWidth = true
-        lblUser.font = UIFont(name: "OpenSans", size: 18)
+        lblUser.font = UIFont(name: "OpenSans-Semibold", size: 18)
         lblUser.translatesAutoresizingMaskIntoConstraints = false
         lblUser.textColor = #colorLiteral(red: 0.09411764706, green: 0.8, blue: 0.5137254902, alpha: 1)
         viewForgotUsername.addSubview(lblUser)
@@ -579,6 +540,7 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
 
         txtNumCard.addTarget(self, action: #selector(editingChangeOffError), for: UIControlEvents.editingChanged)
         txtNumCard.addTarget(self, action: #selector(done2), for: UIControlEvents.editingDidEnd)
+
     }
 
     func setupViewBotNumCard(){
@@ -681,7 +643,7 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
         lblRdbMobile2.adjustsFontSizeToFitWidth = true
         lblRdbMobile2.textColor = #colorLiteral(red: 0.09411764706, green: 0.8, blue: 0.5137254902, alpha: 1)
         lblRdbMobile2.textAlignment = .center
-        lblRdbMobile2.font = UIFont(name: "OpenSans", size: 12)
+        lblRdbMobile2.font = UIFont(name: "OpenSans-Semibold", size: 12)
         lblRdbMobile2.translatesAutoresizingMaskIntoConstraints = false
         viewForgotUsername.addSubview(lblRdbMobile2)
 
@@ -824,11 +786,18 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
         imgNext.isHidden = true
         imgSubmit.isHidden = false
     }
+
+    func setNext(_ sender: UILongPressGestureRecognizer){         //  editingDidBegin
+
+        imgNext.isHidden = false
+        imgSubmit.isHidden = true
+
+    }
     func setView(){         //  editingChanged
         HidenErrorDataforPass()
-        if imgNext.isHidden == false {
-            imgSubmit.isHidden = false
-            imgNext.isHidden = true
+        if imgNext.isHidden == true {
+            imgSubmit.isHidden = true
+            imgNext.isHidden = false
         }
         if  txtUser.text! != "" {
             if !isValidEmail(testStr: txtUser.text!) {
@@ -851,9 +820,9 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
     }
     func setView2(){
         HidenErrorDataforPass()
-        if imgNext.isHidden == false {
-            imgNext.isHidden = true
-            imgSubmit.isHidden = false
+        if imgNext.isHidden == true {
+            imgNext.isHidden = false
+            imgSubmit.isHidden = true
         }
 
         if rdbEmail.isSelected == true {
@@ -866,53 +835,62 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
                 viewBotProtocol.backgroundColor = #colorLiteral(red: 0.9387038946, green: 0.4939151406, blue: 0, alpha: 1)
             }
         }else{
-            if txtProtocol.text?.characters.count == 0{
+            
+            if (txtProtocol.text?.characters.count)! != 0{
+//                guard Int(txtProtocol.text!) != nil else{
+//                    lblError2.text = "Number phone not exist"
+//                    lblError2.isHidden = false
+//                    imgProtocol.image = #imageLiteral(resourceName: "smartphone_error")
+//                    viewBotProtocol.backgroundColor = #colorLiteral(red: 0.9387038946, green: 0.4939151406, blue: 0, alpha: 1)
+//                    return
+//                }
+                let c = txtProtocol.text?.characters.count
+                guard c! >= 10 && c! <= 12 else{
+                    lblError2.text = "Number phone not exist"
+                    lblError2.isHidden = false
+                    imgProtocol.image = #imageLiteral(resourceName: "smartphone_error")
+                    viewBotProtocol.backgroundColor = #colorLiteral(red: 0.9387038946, green: 0.4939151406, blue: 0, alpha: 1)
+                    return
+                }
+                lblError2.isHidden = true
+                imgProtocol.image = #imageLiteral(resourceName: "smartphone (1)")
+                viewBotProtocol.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 0.2)
+
+            } else{
                 lblError2.text = "Number phone is empty"
                 lblError2.isHidden = false
                 imgProtocol.image = #imageLiteral(resourceName: "smartphone_error")
                 viewBotProtocol.backgroundColor = #colorLiteral(red: 0.9387038946, green: 0.4939151406, blue: 0, alpha: 1)
-                HidenErrorDataforUser()
-            }
-            if Int(txtProtocol.text!) == nil {
-                lblError2.text = "Error numberphone"
-                lblError2.isHidden = false
-                imgProtocol.image = #imageLiteral(resourceName: "smartphone_error")
-                viewBotProtocol.backgroundColor = #colorLiteral(red: 0.9387038946, green: 0.4939151406, blue: 0, alpha: 1)
-            }
-            if (txtProtocol.text?.characters.count)! <= 9 || (txtProtocol.text?.characters.count)! >= 13{
-                lblError2.text = "Number phone not exist"
-                lblError2.isHidden = false
-                imgProtocol.image = #imageLiteral(resourceName: "smartphone_error")
-                viewBotProtocol.backgroundColor = #colorLiteral(red: 0.9387038946, green: 0.4939151406, blue: 0, alpha: 1)
-            }else{
-                lblError2.isHidden = true
-                imgProtocol.image = #imageLiteral(resourceName: "smartphone (1)")
-                viewBotProtocol.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 0.2)
-            }
 
+            }
         }
-
-
     }
     func editingChangeOffError(){
 //        if lblError3.isHidden == false{
 //            HidenErrorDataforUser()
 //        }
-        if imgNext2.isHidden == false {
-            imgNext2.isHidden = true
-            imgSubmit2.isHidden = false
+        if imgNext2.isHidden == true {
+            imgNext2.isHidden = false
+            imgSubmit2.isHidden = true
         }
-        if txtNumCard.text! != ""{
-            if txtNumCard.text?.characters.count != 9  {
+        if txtNumCard.text?.characters.count != 0{
+            guard Int(txtNumCard.text!) != nil else {
                 lblError3.text = "Error License"
                 lblError3.isHidden = false
                 viewBotNumCard.backgroundColor = #colorLiteral(red: 0.9387038946, green: 0.4939151406, blue: 0, alpha: 1)
                 imgNumCard.image = #imageLiteral(resourceName: "id-card_error")
-            }else{
-                lblError3.isHidden = true
-                viewBotNumCard.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 0.2)
-                imgNumCard.image = #imageLiteral(resourceName: "id-card")
+                return
             }
+            guard txtNumCard.text?.characters.count == 9 else {
+                lblError3.text = "Error License"
+                lblError3.isHidden = false
+                viewBotNumCard.backgroundColor = #colorLiteral(red: 0.9387038946, green: 0.4939151406, blue: 0, alpha: 1)
+                imgNumCard.image = #imageLiteral(resourceName: "id-card_error")
+                return
+            }
+            lblError3.isHidden = true
+            viewBotNumCard.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 0.2)
+            imgNumCard.image = #imageLiteral(resourceName: "id-card")
 
         }else{
             lblError3.text = "License is Empty"
@@ -921,16 +899,58 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
             imgNumCard.image = #imageLiteral(resourceName: "id-card_error")
         }
 
+
     }
     func showNextButton(){
         imgNext2.isHidden = false
         imgSubmit2.isHidden = true
     }
     func done2(){
-        imgNext2.isHidden = true
-        imgSubmit2.isHidden = false
+        if imgNext2.isHidden == false {
+            imgNext2.isHidden = true
+            imgSubmit2.isHidden = false
+        }
+
     }
     //(Done)
+    func holdNext(_ sender: UILongPressGestureRecognizer){
+        imgNext.image = #imageLiteral(resourceName: "btn_next_selected")
+        if txtUser.text != "" && txtProtocol.text == ""{
+            txtProtocol.becomeFirstResponder()
+            txtProtocol.keyboardType = .numberPad
+            imgSubmit.isHidden = true
+            imgNext.isHidden = false
+        }
+        if txtUser.text == "" && txtProtocol.text != "" {
+            txtUser.becomeFirstResponder()
+            imgSubmit.isHidden = true
+            imgNext.isHidden = false
+        }
+        if txtUser.text != "" && txtProtocol.text != ""{
+
+            if sender.state == .ended{
+                presenter?.getDataPass(userName: txtUser.text!, kindOfSecurity: txtProtocol.text!, isEmail: rdbEmail.isSelected)
+                imgSubmit.isHidden = true
+                imgNext.isHidden = false
+                imgNext.image = #imageLiteral(resourceName: "btn_next")
+                txtProtocol.endEditing(true)
+            }
+        }
+        if txtUser.text == "" && txtProtocol.text == "" {
+
+            imgNext.image = #imageLiteral(resourceName: "btn_next")
+            txtUser.becomeFirstResponder()
+            imgSubmit.isHidden = true
+            imgNext.isHidden = false
+
+        }
+        if sender.state == .ended {
+            imgNext.image = #imageLiteral(resourceName: "btn_next")
+            //            imgSubmit.isHidden = true
+            //            imgNext.isHidden = false
+        }
+        
+    }
     func holdNext2(_ sender: UILongPressGestureRecognizer){
         imgNext2.image = #imageLiteral(resourceName: "btn_next_selected")
         if txtNumCard.text != "" && txtProtocol2.text == ""{
@@ -941,12 +961,18 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
         }
         if txtCalendar.text == "" && txtNumCard.text != ""{
             txtCalendar.becomeFirstResponder()
+            imgSubmit2.isHidden = true
+            imgNext2.isHidden = false
         }
         if txtCalendar.text != "" && txtNumCard.text == ""{
             txtNumCard.becomeFirstResponder()
+            imgSubmit2.isHidden = true
+            imgNext2.isHidden = false
         }
         if txtCalendar.text != "" && txtNumCard.text != "" && txtProtocol2.text == ""{
             txtProtocol2.becomeFirstResponder()
+            imgSubmit2.isHidden = true
+            imgNext2.isHidden = false
         }
         if txtNumCard.text == "" && txtProtocol2.text != "" {
             txtNumCard.becomeFirstResponder()
@@ -957,9 +983,10 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
 
             if sender.state == .ended{
                 presenter?.getDataUser(cmnd: txtNumCard.text!, birthday: txtCalendar.text!, kindOfSecurity: txtProtocol2.text!, isEmail: rdbEmail2.isSelected)
-                imgSubmit2.isHidden = true
-                imgNext2.isHidden = false
+                imgSubmit2.isHidden = false
+                imgNext2.isHidden = true
                 imgNext2.image = #imageLiteral(resourceName: "btn_next")
+                txtProtocol2.endEditing(true)
             }
         }
         if txtNumCard.text == "" && txtProtocol2.text == "" {
@@ -972,15 +999,18 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
         }
         if sender.state == .ended {
             imgNext2.image = #imageLiteral(resourceName: "btn_next")
+            imgNext2.isHidden = false
+            imgSubmit2.isHidden = true
         }
+
     }
     func editingProtocol2(){
         if lblError3.isHidden == false {
             HidenErrorDataforUser()
         }
-        if imgNext2.isHidden == false {
-            imgNext2.isHidden = true
-            imgSubmit2.isHidden = false
+        if imgNext2.isHidden == true {
+            imgNext2.isHidden = false
+            imgSubmit2.isHidden = true
         }
         if rdbEmail2.isSelected == true {
             if txtProtocol2.text?.characters.count == 0{
@@ -995,33 +1025,42 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
                 lblError4.isHidden = false
                 imgProtocol2.image = #imageLiteral(resourceName: "smartphone_error")
                 viewBotProtocol2.backgroundColor = #colorLiteral(red: 0.9387038946, green: 0.4939151406, blue: 0, alpha: 1)
+
             }
             else{
                 lblError4.isHidden = true
+                imgProtocol2.image = #imageLiteral(resourceName: "smartphone (1)")
+                viewBotProtocol2.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 0.2)
+
             }
         }else{
-            if (txtProtocol2.text?.characters.count == 0){
+            if txtProtocol2.text?.characters.count == 0{
                 lblError4.text = "Number phone is empty"
                 lblError4.isHidden = false
                 imgProtocol2.image = #imageLiteral(resourceName: "smartphone_error")
                 viewBotProtocol2.backgroundColor = #colorLiteral(red: 0.9387038946, green: 0.4939151406, blue: 0, alpha: 1)
+                HidenErrorDataforUser()
+
             }
-            if Int(txtProtocol2.text!) == nil {
-                lblError4.text = "Error numberphone"
-                lblError4.isHidden = false
-                imgProtocol2.image = #imageLiteral(resourceName: "smartphone_error")
-                viewBotProtocol2.backgroundColor = #colorLiteral(red: 0.9387038946, green: 0.4939151406, blue: 0, alpha: 1)
+            if (txtProtocol2.text?.characters.count)! >= 10 && (txtProtocol2.text?.characters.count)! <= 12{
+//                if Int(txtProtocol2.text!) == nil {
+//                    lblError4.text = "Number phone not exist"
+//                    lblError4.isHidden = false
+//                    imgProtocol2.image = #imageLiteral(resourceName: "smartphone_error")
+//                    viewBotProtocol2.backgroundColor = #colorLiteral(red: 0.9387038946, green: 0.4939151406, blue: 0, alpha: 1)
+//                }else{
+                    lblError4.isHidden = true
+                    imgProtocol2.image = #imageLiteral(resourceName: "smartphone (1)")
+                    viewBotProtocol2.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 0.2)
+
+                //}
             }
-            if ((txtProtocol2.text?.characters.count)! <= 9 || (txtProtocol2.text?.characters.count)! >= 13){
+            else{
                 lblError4.text = "Number phone not exist"
                 lblError4.isHidden = false
                 imgProtocol2.image = #imageLiteral(resourceName: "smartphone_error")
                 viewBotProtocol2.backgroundColor = #colorLiteral(red: 0.9387038946, green: 0.4939151406, blue: 0, alpha: 1)
 
-            }else{
-                lblError4.isHidden = true
-                imgProtocol2.image = #imageLiteral(resourceName: "smartphone (1)")
-                viewBotProtocol2.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 0.2)
             }
 
 
@@ -1042,36 +1081,48 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
         lblError2.isHidden = true
         txtProtocol.keyboardType = .numberPad
         txtProtocol.placeholder = "Phone Number"
+        txtProtocol.becomeFirstResponder()
+        txtProtocol.autocorrectionType = .no
         rdbMobile.select(animated: true)
         lblRdbMobile.textColor = #colorLiteral(red: 0.09411764706, green: 0.8, blue: 0.5137254902, alpha: 1)
+        lblRdbMobile.font = UIFont(name: "OpenSans-Semibold", size: 11)
         lblRdbEmail.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        lblRdbEmail.font = UIFont(name: "OpenSans", size: 11)
         imgProtocol.image = #imageLiteral(resourceName: "smartphone (1)")
         viewBotProtocol.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 0.2)
 
     }
     func isRdbEmail(){
+         txtProtocol.endEditing(true)
+        txtProtocol.text = ""
+        rdbMobile.deselect()
+        lblError2.isHidden = true
+        txtProtocol.keyboardType = .emailAddress
+        txtProtocol.placeholder = "Email"
+        txtProtocol.becomeFirstResponder()
+        txtProtocol.autocorrectionType = .no
+        rdbEmail.select(animated: true)
         imgProtocol.image = #imageLiteral(resourceName: "smartphone (1)")
         viewBotProtocol.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 0.2)
-        txtProtocol.text = ""
-            rdbEmail.select(animated: true)
-            txtProtocol.endEditing(true)
-            lblError2.isHidden = true
-            txtProtocol.placeholder = "Email"
-            txtProtocol.keyboardType = .emailAddress
-            rdbMobile.deselect()
         lblRdbMobile.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        lblRdbMobile.font = UIFont(name: "OpenSans", size: 11)
         lblRdbEmail.textColor = #colorLiteral(red: 0.09411764706, green: 0.8, blue: 0.5137254902, alpha: 1)
+        lblRdbEmail.font = UIFont(name: "OpenSans-Semibold", size: 11)
     }
     func isRdbMobile2(){
+        txtProtocol2.endEditing(true)
         rdbMobile2.select(animated: true)
         rdbEmail2.deselect()
         txtProtocol2.text = ""
         lblError4.isHidden = true
         txtProtocol2.placeholder = "Phone Number"
         txtProtocol2.keyboardType = .numberPad
-        txtProtocol2.endEditing(true)
+        txtProtocol2.becomeFirstResponder()
+        txtProtocol2.autocorrectionType = .no
         lblRdbMobile2.textColor = #colorLiteral(red: 0.09411764706, green: 0.8, blue: 0.5137254902, alpha: 1)
+        lblRdbMobile2.font = UIFont(name: "OpenSans-Semibold", size: 11)
         lblRdbEmail2.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        lblRdbEmail2.font = UIFont(name: "OpenSans", size: 11)
         imgProtocol2.image = #imageLiteral(resourceName: "smartphone (1)")
         viewBotProtocol2.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 0.2)
     }
@@ -1080,12 +1131,16 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
         txtProtocol2.placeholder = "Email"
         txtProtocol2.keyboardType = .emailAddress
         txtProtocol2.text = ""
+        txtProtocol2.becomeFirstResponder()
+        txtProtocol2.autocorrectionType = .no
         rdbEmail2.select(animated: true)
         lblError4.isHidden = true
 
         rdbMobile2.deselect()
         lblRdbMobile2.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        lblRdbMobile2.font = UIFont(name: "OpenSans", size: 11)
         lblRdbEmail2.textColor = #colorLiteral(red: 0.09411764706, green: 0.8, blue: 0.5137254902, alpha: 1)
+        lblRdbEmail2.font = UIFont(name: "OpenSans-Semibold", size: 11)
         imgProtocol2.image = #imageLiteral(resourceName: "smartphone (1)")
         viewBotProtocol2.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 0.2)
     }
@@ -1110,11 +1165,13 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
         if result {
             DispatchQueue.main.async {
                 self.loadViewSuccessUserName()
+                self.HidenErrorDataforUser()
             }
         }else{
             DispatchQueue.main.async {
                 self.showErrorDataforUser()
             }
+
         }
     }
 
@@ -1255,27 +1312,36 @@ class ForgotViewController: UIViewController, ForgotViewProtocol {
         scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
         print("sddsvs")
     }
-
-}
-extension ForgotViewController:UIScrollViewDelegate{
+    // MARK: - DELEGATE SCROLLVIEW
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let padMidContentOffsetY = scrollView.contentSize.height/3
 
         if scrollView.contentOffset.y >= padMidContentOffsetY{
             imgSubmit.isHidden = true
             imgPopupScroll.isHidden = false
+            self.dismissKeyboard()
 
         }else{
             imgSubmit.isHidden = false
             imgPopupScroll.isHidden = true
         }
     }
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
 
-}
-extension ForgotViewController:UITextFieldDelegate{
+        imgNext.isHidden = true
+    }
+    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+        if scrollView.scrollsToTop{
+            imgSubmit.isHidden = false
+            imgNext.isHidden = true
+        }
+    }
+    // MARK: DELEGATE TEXTFIELD
     func dismissKeyboard() {
         view.endEditing(true)
     }
+
+
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 
         //1. To make sure that this is applicable to only particular textfield add tag.
@@ -1312,8 +1378,10 @@ extension ForgotViewController:UITextFieldDelegate{
             }
             //4. this one helps to make sure only 8 character is added in textfield .(ie: dd-mm-yy)
             return newLength <= 8;
-            
+
         }
+
+
         return true
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -1355,4 +1423,5 @@ extension ForgotViewController:UITextFieldDelegate{
         let result = emailTest.evaluate(with: testStr)
         return result
     }
+
 }
