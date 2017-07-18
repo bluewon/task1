@@ -28,10 +28,10 @@
 		6F13EDA41F1BB1DA00A1A0CB /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED911F1BB1DA00A1A0CB /* OpenSans-SemiboldItalic.ttf */; };
 		6F13EDA51F1BB1DA00A1A0CB /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F13ED911F1BB1DA00A1A0CB /* OpenSans-SemiboldItalic.ttf */; };
 		6F24DA741F0B406D003C2DD2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F24DA731F0B406D003C2DD2 /* LoginViewController.swift */; };
+		6F4E02761F1CA0980038EBCB /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4E02751F1CA0980038EBCB /* Log.swift */; };
 		6F873F621F04C3A60072326F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F873F611F04C3A60072326F /* AppDelegate.swift */; };
 		6F873F691F04C3A60072326F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F873F681F04C3A60072326F /* Assets.xcassets */; };
 		6F873F6C1F04C3A60072326F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F873F6A1F04C3A60072326F /* LaunchScreen.storyboard */; };
-		6F873F741F04C5070072326F /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F873F731F04C5070072326F /* ForgotPassViewController.swift */; };
 		6F873F761F04D4DC0072326F /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F873F751F04D4DC0072326F /* AutoLayout.swift */; };
 		6F925A641F05649C00767848 /* LTHRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F925A631F05649C00767848 /* LTHRadioButton.swift */; };
 		6F9B96AB1F15B6A2001E8274 /* ErrorInfor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9B96AA1F15B6A2001E8274 /* ErrorInfor.swift */; };
@@ -69,12 +69,12 @@
 		6F13ED901F1BB1DA00A1A0CB /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		6F13ED911F1BB1DA00A1A0CB /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		6F24DA731F0B406D003C2DD2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6F4E02751F1CA0980038EBCB /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		6F873F5E1F04C3A60072326F /* task1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F873F611F04C3A60072326F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F873F681F04C3A60072326F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F873F6B1F04C3A60072326F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F873F6D1F04C3A60072326F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6F873F731F04C5070072326F /* ForgotPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		6F873F751F04D4DC0072326F /* AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
 		6F925A631F05649C00767848 /* LTHRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTHRadioButton.swift; sourceTree = "<group>"; };
 		6F9B96AA1F15B6A2001E8274 /* ErrorInfor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorInfor.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 				6F873F681F04C3A60072326F /* Assets.xcassets */,
 				6F873F6A1F04C3A60072326F /* LaunchScreen.storyboard */,
 				6F873F6D1F04C3A60072326F /* Info.plist */,
-				6F873F731F04C5070072326F /* ForgotPassViewController.swift */,
+				6F4E02751F1CA0980038EBCB /* Log.swift */,
 			);
 			path = task1;
 			sourceTree = "<group>";
@@ -337,6 +337,7 @@
 			files = (
 				6F873F761F04D4DC0072326F /* AutoLayout.swift in Sources */,
 				6F873F621F04C3A60072326F /* AppDelegate.swift in Sources */,
+				6F4E02761F1CA0980038EBCB /* Log.swift in Sources */,
 				6FA6BD881F0B46FD00869588 /* DataPassWithNumPhone.swift in Sources */,
 				6FBB41E51F0C8E0E00556F82 /* DataUserWithNumPhone.swift in Sources */,
 				6FF11F4C1F0812890070A563 /* ForgotViewController.swift in Sources */,
@@ -344,7 +345,6 @@
 				6FF11F4A1F0812890070A563 /* ForgotProtocols.swift in Sources */,
 				6F925A641F05649C00767848 /* LTHRadioButton.swift in Sources */,
 				6FF11F481F0812890070A563 /* ForgotInteractor.swift in Sources */,
-				6F873F741F04C5070072326F /* ForgotPassViewController.swift in Sources */,
 				6F9B96AB1F15B6A2001E8274 /* ErrorInfor.swift in Sources */,
 				6FF11F491F0812890070A563 /* ForgotPresenter.swift in Sources */,
 				6F24DA741F0B406D003C2DD2 /* LoginViewController.swift in Sources */,
@@ -488,6 +488,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.quan.task1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -502,6 +503,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.quan.task1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

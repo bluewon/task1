@@ -19,7 +19,7 @@ class ForgotInteractor: ForgotInteractorProtocol {
             let data = try checkValidateInput(userName: userName, kindOfSecurity: kindOfSecurity, isEmail: isEmail)
             let queue = DispatchQueue(label: "inputDataPass_Email")
             queue.async {
-                self.postJson(json: data)
+                self.postJson(json: data, isForGotPass: true)
             }
         }catch let error as errorEmail{
             print(handleErrorWithEmail(error: error))
@@ -40,7 +40,7 @@ class ForgotInteractor: ForgotInteractorProtocol {
             let data =  try checkValidateInputForgotUserName(license: cmnd, birthday: birthday, kindOfSecurity: kindOfSecurity, isEmail: isEmail)
             let queue3 = DispatchQueue(label: "inputDataUser_Email")
             queue3.async {
-                self.postJson(json: data)
+                self.postJson(json: data, isForGotPass: false)
             }
 
         } catch let errorWithLicense as errorLicense {
@@ -61,7 +61,8 @@ class ForgotInteractor: ForgotInteractorProtocol {
             presenter?.respondDataUser(false)
         }
     }
-    func postJson(json:Any){
+    func postJson(json:Any, isForGotPass:Bool){
+
         let url = URL(string: "https://dev-dbs.ntex.vn/user/forgot/info")
         var urlRepuest = URLRequest(url: url!)
         urlRepuest.httpMethod = "POST"
@@ -74,8 +75,14 @@ class ForgotInteractor: ForgotInteractorProtocol {
                 self.presenter?.respondDataPass(false)
             }else{
                 if let httpResponse = res as? HTTPURLResponse {
-                    print("statusCode: \(httpResponse.statusCode)")
-                    self.presenter?.respondDataPass(true)
+                    if isForGotPass{
+                        print("statusCode: \(httpResponse.statusCode)")
+                        self.presenter?.respondDataPass(true)
+                    }else{
+                        print("statusCode: \(httpResponse.statusCode)")
+                        self.presenter?.respondDataUser(true)
+                    }
+
                 }
             }
         }.resume()
@@ -104,24 +111,19 @@ class ForgotInteractor: ForgotInteractorProtocol {
     }
 
     func checkValidateInputForgotUserName( license: String, birthday:String, kindOfSecurity: String, isEmail: Bool) throws -> Any{
-        guard license.characters.count != 0 else {
-            throw errorLicense.emptyLicense
-        }
-        guard Int(license) != nil else {
-            throw errorLicense.notValidLicense
-        }
+//        guard license.characters.count != 0 else {
+//            throw errorLicense.emptyLicense
+//        }
+
         guard license.characters.count == 9 else {
             throw errorLicense.notValidLicense
         }
-        guard birthday.characters.count != 0 else {
-            throw errorDate.emptyDate
-        }
+//        guard birthday.characters.count != 0 else {
+//            throw errorDate.emptyDate
+//        }
         guard isEmail else {
             guard kindOfSecurity.characters.count != 0 else {
                 throw errorNumberPhone.emptyNumberPhone
-            }
-            guard Int(kindOfSecurity) != nil else {
-                throw errorNumberPhone.notNumber
             }
             guard kindOfSecurity.characters.count >= 10 && kindOfSecurity.characters.count <= 12 else {
                 throw errorNumberPhone.numberPhoneNotExist
@@ -175,9 +177,6 @@ class ForgotInteractor: ForgotInteractorProtocol {
         guard isEmail else {
             guard kindOfSecurity.characters.count != 0 else {
                 throw errorNumberPhone.emptyNumberPhone
-            }
-            guard Int(kindOfSecurity) != nil else {
-                throw errorNumberPhone.notNumber
             }
             guard kindOfSecurity.characters.count >= 10 && kindOfSecurity.characters.count <= 12 else {
                 throw errorNumberPhone.numberPhoneNotExist
